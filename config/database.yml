@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: cinema-app-api
+  username: sebastianhm
+  password: sehemu
+
+test:
+  <<: *default
+  database: cinema-app-api-test
+  username: sebastianhm
+  password: sehemu
+
+production:
+  <<: *default
+  database: cinema-app-production
+  username: cinema-app-api
+  password: <%= ENV["NUTRI_TRACKER_API_DATABASE_PASSWORD"] %>
