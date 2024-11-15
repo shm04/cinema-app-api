@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  has_many :functions
+  has_many :shows
   
   validates :title, presence: true
   validates :description, presence: true
