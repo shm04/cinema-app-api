@@ -1,4 +1,5 @@
 class Movie < ApplicationRecord
+  belongs_to :cinema
   has_many :shows
   
   validates :title, presence: true

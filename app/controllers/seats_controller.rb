@@ -1,7 +1,8 @@
 class SeatsController < ApplicationController
   def index
-    @seats = Seat.all
-    render json: @seats
+    room = Room.find(params[:room_id])
+    seats = room.seats
+    render json: seats
   end
 
   def show

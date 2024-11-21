@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   resources :cinemas do
-    resources :shows
     resources :rooms do
       resources :seats
     end
-    resources :movies
+    resources :movies do
+      resources :shows, only: [:index, :show, :create, :destroy]
+    end
   end
 end

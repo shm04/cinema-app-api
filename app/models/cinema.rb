@@ -1,5 +1,6 @@
 class Cinema < ApplicationRecord
   has_many :rooms
+  has_many :movies
 
   validates :cinema_name, presence: true
   validates :address, presence: true
