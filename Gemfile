@@ -48,3 +48,8 @@ end
 gem "psych", "~> 3.0"
 
 gem 'rack-cors'
+
+group :development, :test do
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
+end
